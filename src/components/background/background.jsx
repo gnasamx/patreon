@@ -1,10 +1,10 @@
 import React from 'react';
-import {BackgroundContainer, BackgroundContent} from './styled-background';
+import {BackgroundWrapper, BackgroundContent} from './styled-background';
 
 export default function Background({children}) {
   return (
-    <BackgroundContainer>
+    <BackgroundWrapper>
       <BackgroundContent>{children}</BackgroundContent>
-    </BackgroundContainer>
+    </BackgroundWrapper>
   );
 }

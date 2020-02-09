@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BackgroundContainer = styled.div`
+export const BackgroundWrapper = styled.div`
   box-sizing: border-box;
   padding: 0rem;
   margin: 0rem;
