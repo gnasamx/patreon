@@ -13,7 +13,9 @@ function App() {
       <Button color="primary" isLoading={isLoading}>
         Select
       </Button>
-      <Button color="secondary">Make a custom pledge</Button>
+      <Button color="secondary" isLoading={isLoading}>
+        Make a custom pledge
+      </Button>
     </Background>
   );
 }

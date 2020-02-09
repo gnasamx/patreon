@@ -30,7 +30,8 @@ const CircleAnimation = styled.circle`
   animation-iteration-count: infinite;
   animation-name: spinning-circle;
   fill: none;
-  stroke: rgb(255, 255, 255);
+  stroke: ${({color}) =>
+    color === 'primary' ? 'rgb(255, 255, 255)' : 'rgb(124, 61, 238)'};
   stroke-dasharray: 180px;
   stroke-dashoffset: 200px;
   transform-origin: center;
@@ -54,15 +55,15 @@ const CircleAnimation = styled.circle`
   }
 `;
 
-export default function Spinner() {
+export default function Spinner({color}) {
   return (
     <SpinnerWrapper viewBox="0 0 64 64">
       <CircleAnimation
-        color="light"
         cx="32"
         cy="32"
         r="32"
         strokeLinecap="round"
+        color={color}
       />
     </SpinnerWrapper>
   );
