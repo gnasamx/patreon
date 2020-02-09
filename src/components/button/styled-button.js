@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import {getBackgroundColor, getColor} from './getStyles';
+import {getBackgroundColor, getColor, getButtonWidth} from './getStyles';
 
 // add margin prop for top or bottom margin
 export const ButtonWrapper = styled.div`
   box-sizing: border-box;
   padding: 0rem;
   margin: 0rem;
+  width: ${({width}) => getButtonWidth(width)};
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
 `;
 
@@ -33,5 +34,10 @@ export const ButtonField = styled.button`
   &:hover {
     background-color: ${({color}) =>
       getBackgroundColor('background', color, 'hover')};
+  }
+
+  &:active {
+    background-color: ${({color}) =>
+      getBackgroundColor('background', color, 'active')};
   }
 `;

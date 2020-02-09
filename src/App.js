@@ -6,7 +6,9 @@ function App() {
   return (
     <Background>
       <Button color="primary">Select</Button>
-      <Button color="secondary">Make a custom pledge</Button>
+      <Button color="secondary" width="full">
+        Make a custom pledge
+      </Button>
     </Background>
   );
 }
