@@ -41,3 +41,23 @@ export const ButtonField = styled.button`
       getBackgroundColor('background', color, 'active')};
   }
 `;
+
+export const ButtonText = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  visibility: ${({isLoading}) => (isLoading ? 'hidden' : 'visible')};
+`;
+
+export const IconWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: ${({isLoading}) => (!isLoading ? 'none' : 'flex')};
+`;

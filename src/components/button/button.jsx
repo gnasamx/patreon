@@ -1,11 +1,20 @@
 import React from 'react';
-import {ButtonWrapper, ButtonField} from './styled-button';
+import {
+  ButtonWrapper,
+  ButtonField,
+  ButtonText,
+  IconWrapper,
+} from './styled-button';
+import Spinner from '../icons/spinner';
 
-export default function Button({children, color, width}) {
+export default function Button({children, color, width, isLoading}) {
   return (
     <ButtonWrapper width={width}>
       <ButtonField type="button" color={color}>
-        {children}
+        <IconWrapper isLoading={isLoading}>
+          {isLoading && <Spinner />}
+        </IconWrapper>
+        <ButtonText isLoading={isLoading}>{children}</ButtonText>
       </ButtonField>
     </ButtonWrapper>
   );

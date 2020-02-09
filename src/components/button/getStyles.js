@@ -7,7 +7,6 @@ export const getColor = (property, color, state) => {
 };
 
 export const getButtonWidth = width => {
-  console.log('Inside getButtonWidth: ', width);
   if (width === 'full') {
     return '100%';
   } else {
