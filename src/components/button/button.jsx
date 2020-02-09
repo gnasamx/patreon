@@ -12,7 +12,7 @@ export default function Button({children, color, width, isLoading}) {
     <ButtonWrapper width={width}>
       <ButtonField type="button" color={color}>
         <IconWrapper isLoading={isLoading}>
-          {isLoading && <Spinner />}
+          <Spinner />
         </IconWrapper>
         <ButtonText isLoading={isLoading}>{children}</ButtonText>
       </ButtonField>
