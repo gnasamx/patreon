@@ -29,6 +29,7 @@ export const ButtonField = styled.button`
     ${({color}) => getBackgroundColor('background', color, 'default')};
   padding: 0.78125rem 1.5rem;
   text-decoration: none;
+  outline: none;
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
 
   &:hover {

@@ -1,20 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Background from './components/background/background';
 import Button from './components/button/button';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 4000);
 
   return (
     <Background>
-      <Button color="primary" isLoading={isLoading}>
+      <Button color="primary" >
         Select
       </Button>
-      <Button color="secondary" isLoading={isLoading}>
+      <Button color="secondary">
         Make a custom pledge
+      </Button>
+      <Button color="primary" >
+        Register
       </Button>
     </Background>
   );

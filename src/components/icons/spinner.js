@@ -10,7 +10,6 @@ const SpinnerWrapper = styled.svg`
   animation-iteration-count: infinite;
   animation-name: svg-animation;
   display: block;
-  padding-top: 1.5px;
   height: 1rem;
   width: 1rem;
 
