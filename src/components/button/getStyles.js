@@ -16,5 +16,13 @@ export const getButtonWidth = width => {
   }
 };
 
+export const getButtonSize = size => {
+  if(size === 'large') {
+    return '0.78125rem 1.5rem';
+  } else {
+    return '0.46875rem 1rem';
+  }
+}
+
 
 

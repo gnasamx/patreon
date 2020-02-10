@@ -7,10 +7,10 @@ import {
 } from './styled-button';
 import Spinner from '../icons/spinner';
 
-export default function Button({children, color, width, isLoading}) {
+export default function Button({children, color, width, isLoading, size}) {
   return (
     <ButtonWrapper width={width}>
-      <ButtonField type="button" color={color}>
+      <ButtonField type="button" color={color} size={size}>
         <IconWrapper isLoading={isLoading}>
           <Spinner color={color} />
         </IconWrapper>

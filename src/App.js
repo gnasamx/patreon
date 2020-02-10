@@ -6,7 +6,7 @@ function App() {
 
   return (
     <Background>
-      <Button color="primary" >
+      <Button color="primary" size="large">
         Select
       </Button>
       <Button color="secondary">
