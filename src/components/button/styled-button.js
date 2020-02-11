@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import {getBackgroundColor, getColor, getButtonWidth, getButtonSize} from './getStyles';
+import {
+  getBackgroundColor,
+  getColor,
+  getButtonWidth,
+  getButtonSize,
+} from './getStyles';
 
 // add margin prop for top or bottom margin
 export const ButtonWrapper = styled.div`
@@ -13,8 +18,10 @@ export const ButtonWrapper = styled.div`
 export const ButtonField = styled.button`
   align-items: center;
   box-sizing: border-box;
-  background-color: ${({color}) => getBackgroundColor('background', color)};
-  cursor: pointer;
+  background-color: ${({color, disabled}) =>
+    getBackgroundColor('background', color, disabled ? 'disabled' : 'default')};
+  cursor: ${({disabled, isLoading}) =>
+    disabled || isLoading ? 'default' : 'pointer'};
   display: inline-flex;
   font-weight: 500;
   justify-content: center;
@@ -23,10 +30,16 @@ export const ButtonField = styled.button`
   text-align: center;
   text-transform: none;
   width: 100%;
-  color: ${({color}) => getColor('color', color, 'default')};
+  color: ${({color, disabled}) =>
+    getColor('color', color, disabled ? 'disabled' : 'default')};
   border-radius: 9999px;
   border: 1px solid
-    ${({color}) => getBackgroundColor('background', color, 'default')};
+    ${({color, disabled}) =>
+      getBackgroundColor(
+        'background',
+        color,
+        disabled ? 'disabled' : 'default',
+      )};
   padding: ${({size}) => getButtonSize(size)};
   text-decoration: none;
   outline: none;
@@ -40,6 +53,11 @@ export const ButtonField = styled.button`
   &:active {
     background-color: ${({color}) =>
       getBackgroundColor('background', color, 'active')};
+  }
+
+  &:disabled {
+    background-color: ${({color}) =>
+      getBackgroundColor('background', color, 'disabled')};
   }
 `;
 
