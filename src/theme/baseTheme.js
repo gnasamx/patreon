@@ -18,6 +18,22 @@ export const baseTheme = {
       active: color.base_light_purple200,
       hover: color.base_light_purple300,
     },
+    outline: {
+      default: color.base_outline_white,
+      active: color.base_outline_white_active,
+      hover: color.base_outline_white_hover
+    }
+  },
+  border: {
+    primary: {
+      default: color.base_purple100,
+    },
+    secondary: {
+      default: color.base_light_purple100,
+    },
+    outline: {
+      default: color.base_outline_border,
+    }
   },
   color: {
     primary: {
@@ -26,5 +42,8 @@ export const baseTheme = {
     secondary: {
       default: color.text_purple100,
     },
+    outline: {
+      default: color.text_outline_gray,
+    }
   },
 };

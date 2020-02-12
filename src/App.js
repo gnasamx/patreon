@@ -16,6 +16,9 @@ function App() {
       <Button color="primary" disabled>
         Disabled
       </Button>
+      <Button color="outline" size="large">
+        Cart
+      </Button>
     </Background>
   );
 }

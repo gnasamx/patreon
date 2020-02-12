@@ -36,7 +36,7 @@ export const ButtonField = styled.button`
   border: 1px solid
     ${({color, disabled}) =>
       getBackgroundColor(
-        'background',
+        'border',
         color,
         disabled ? 'disabled' : 'default',
       )};
@@ -66,7 +66,7 @@ export const ButtonText = styled.div`
   display: flex;
   justify-content: center;
   visibility: ${({isLoading}) => (isLoading ? 'hidden' : 'visible')};
-  flex-direction: ${({iconPosition}) => iconPosition === 'right' ? 'row': 'row-reverse' }
+  flex-direction: ${({iconPosition}) => (iconPosition === 'right' ? 'row' : 'row-reverse')};
 `;
 
 export const SpinnerWrapper = styled.div`
