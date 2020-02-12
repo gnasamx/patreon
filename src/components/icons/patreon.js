@@ -8,17 +8,17 @@ const Svg = styled.svg`
   stroke-width: 1.2px;
   height: 1rem;
   width: 1rem;
-`
+`;
 
 const Path = styled.path`
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
-`
+`;
 
-const getColor = (color) => {
+const getColor = color => {
   return applyPropertyStyle('color', color);
-}
+};
 
-export default function PatreonIcon({color}) {
+export default function Patreon({color}) {
   return (
     <Svg viewBox="0 0 48 48">
       <Path
@@ -28,5 +28,5 @@ export default function PatreonIcon({color}) {
         fillRule="evenodd"
       />
     </Svg>
-  )
+  );
 }

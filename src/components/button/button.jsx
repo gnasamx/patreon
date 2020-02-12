@@ -6,10 +6,10 @@ import {
   SpinnerWrapper,
   Space,
   IconWrapper,
-  IconSpan
+  IconSpan,
 } from './styled-button';
 import Spinner from '../icons/spinner';
-import Patreon from '../icons/patreon';
+// import Patreon from '../icons/patreon';
 
 export default function Button({
   children,
@@ -19,7 +19,10 @@ export default function Button({
   size,
   iconPosition,
   disabled,
+  icon,
 }) {
+  console.log('Icon: ', icon);
+  const Icon = icon;
   return (
     <ButtonWrapper width={width}>
       <ButtonField
@@ -34,17 +37,17 @@ export default function Button({
         </SpinnerWrapper>
         <ButtonText isLoading={isLoading} iconPosition={iconPosition}>
           {children}
-          {!disabled &&
-          <>
-            <Space />
-            <IconWrapper>
-              <IconSpan>
-                <Patreon color={color} />
-              </IconSpan>
-            </IconWrapper>
-          </>
-          }
-          </ButtonText>
+          {!disabled && (
+            <>
+              <Space />
+              <IconWrapper>
+                <IconSpan>
+                  <Icon color={color} />
+                </IconSpan>
+              </IconWrapper>
+            </>
+          )}
+        </ButtonText>
       </ButtonField>
     </ButtonWrapper>
   );
