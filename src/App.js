@@ -6,12 +6,12 @@ function App() {
   return (
     <Background>
       <Button color="primary" size="large">
-        Select
+        Click Me!
       </Button>
       <Button color="secondary">Make a custom pledge</Button>
-      <Button color="primary">Register</Button>
-      <Button color="primary" isLoading>
-        Disabled
+      <Button color="primary" iconPosition="right" >Register</Button>
+      <Button color="secondary" isLoading>
+        Send
       </Button>
       <Button color="primary" disabled>
         Disabled

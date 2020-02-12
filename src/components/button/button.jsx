@@ -3,9 +3,13 @@ import {
   ButtonWrapper,
   ButtonField,
   ButtonText,
+  SpinnerWrapper,
+  Space,
   IconWrapper,
+  IconSpan
 } from './styled-button';
 import Spinner from '../icons/spinner';
+import Patreon from '../icons/patreon';
 
 export default function Button({
   children,
@@ -13,6 +17,7 @@ export default function Button({
   width,
   isLoading,
   size,
+  iconPosition,
   disabled,
 }) {
   return (
@@ -24,10 +29,22 @@ export default function Button({
         disabled={disabled}
         isLoading={isLoading}
       >
-        <IconWrapper isLoading={isLoading}>
+        <SpinnerWrapper isLoading={isLoading}>
           <Spinner color={color} />
-        </IconWrapper>
-        <ButtonText isLoading={isLoading}>{children}</ButtonText>
+        </SpinnerWrapper>
+        <ButtonText isLoading={isLoading} iconPosition={iconPosition}>
+          {children}
+          {!disabled &&
+          <>
+            <Space />
+            <IconWrapper>
+              <IconSpan>
+                <Patreon color={color} />
+              </IconSpan>
+            </IconWrapper>
+          </>
+          }
+          </ButtonText>
       </ButtonField>
     </ButtonWrapper>
   );

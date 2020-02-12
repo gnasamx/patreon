@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SpinnerWrapper = styled.svg`
+const Svg = styled.svg`
   overflow: visible;
   margin-left: auto;
   margin-right: auto;
@@ -23,7 +23,7 @@ const SpinnerWrapper = styled.svg`
   }
 `;
 
-const CircleAnimation = styled.circle`
+const Circle = styled.circle`
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   animation-iteration-count: infinite;
@@ -56,14 +56,14 @@ const CircleAnimation = styled.circle`
 
 export default function Spinner({color}) {
   return (
-    <SpinnerWrapper viewBox="0 0 64 64">
-      <CircleAnimation
+    <Svg viewBox="0 0 64 64">
+      <Circle
         cx="32"
         cy="32"
         r="32"
         strokeLinecap="round"
         color={color}
       />
-    </SpinnerWrapper>
+    </Svg>
   );
 }

@@ -66,9 +66,10 @@ export const ButtonText = styled.div`
   display: flex;
   justify-content: center;
   visibility: ${({isLoading}) => (isLoading ? 'hidden' : 'visible')};
+  flex-direction: ${({iconPosition}) => iconPosition === 'right' ? 'row': 'row-reverse' }
 `;
 
-export const IconWrapper = styled.div`
+export const SpinnerWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -80,3 +81,25 @@ export const IconWrapper = styled.div`
   align-items: center;
   display: ${({isLoading}) => (!isLoading ? 'none' : 'flex')};
 `;
+
+export const Space = styled.div`
+  height: 1px;
+  width: 0.5rem;
+`
+
+export const IconWrapper = styled.div`
+  align-self: center;
+  align-items: center;
+  display: inline-flex;
+  cursor: unset;
+  vertical-align: unset;
+  height: unset;
+  width: unset;
+  filter: unset;
+`
+
+export const IconSpan = styled.span`
+  height: 1rem;
+  width: 1rem;
+`
+
