@@ -1,10 +1,8 @@
 import React from 'react';
 import Background from './components/background/background';
 import Button from './components/button/button';
-import Spinner from './components/icons/spinner';
 
 function App() {
-  console.log('S: ', Spinner);
   return (
     <Background>
       <Button color="secondary" size="large">
@@ -20,7 +18,7 @@ function App() {
       <Button color="primary" disabled>
         Disabled
       </Button>
-      <Button color="outline" size="large" icon={Spinner}>
+      <Button color="outline" size="large">
         Cart
       </Button>
     </Background>

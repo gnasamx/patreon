@@ -19,10 +19,7 @@ export default function Button({
   size,
   iconPosition,
   disabled,
-  icon,
 }) {
-  console.log('Icon: ', icon);
-  const Icon = icon;
   return (
     <ButtonWrapper width={width}>
       <ButtonField
@@ -42,7 +39,7 @@ export default function Button({
               <Space />
               <IconWrapper>
                 <IconSpan>
-                  <Icon color={color} />
+                  <Spinner color={color} />
                 </IconSpan>
               </IconWrapper>
             </>
