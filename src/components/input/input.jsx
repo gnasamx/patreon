@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import {
   FormGroup,
   Label,
   InputContainer,
   InputField,
   ErrorContainer,
-  ErrorSpan
-} from "./styled-input.js";
+  ErrorSpan,
+} from './styled-input.js';
 
 export default function Input({
   onChange,
@@ -15,7 +15,7 @@ export default function Input({
   type,
   label,
   onBlur,
-  error
+  error,
 }) {
   return (
     <FormGroup>
@@ -29,6 +29,7 @@ export default function Input({
           value={value}
           onChange={onChange}
           onBlur={onBlur}
+          error={error}
         />
       </InputContainer>
       {error && (
