@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FormGroup = styled.div`
   box-sizing: border-box;
@@ -6,6 +6,7 @@ export const FormGroup = styled.div`
   margin: 0 0 0.5rem 0;
   width: 100%;
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  width: 100%;
 `;
 
 export const Label = styled.label`
@@ -33,10 +34,10 @@ export const InputField = styled.input`
   color: rgb(36, 30, 18);
   height: 3rem;
   font-size: 1rem !important;
-  background: rgb(245, 244, 242);
+  background-color: ${({error}) => getBackgroundColor(error)};
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(229, 227, 221);
+  border-color: ${({error}) => getBorderColor(error)};
   outline: none;
   padding: 0.75rem 1rem;
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
@@ -72,3 +73,19 @@ export const ErrorSpan = styled.span`
   margin: 0px;
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
 `;
+
+const getBackgroundColor = error => {
+  if (error) {
+    return 'rgb(250, 233, 234)';
+  } else {
+    return 'rgb(245, 244, 242)';
+  }
+};
+
+const getBorderColor = error => {
+  if (error) {
+    return 'rgb(204, 50, 63)';
+  } else {
+    return 'rgb(229, 227, 221)';
+  }
+};
