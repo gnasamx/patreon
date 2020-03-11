@@ -19,7 +19,6 @@ export default function Button({
   size,
   iconPosition,
   disabled,
-  icon,
 }) {
   return (
     <ButtonWrapper width={width}>
