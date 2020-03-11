@@ -9,7 +9,7 @@ import {
   IconSpan,
 } from './styled-button';
 import Spinner from '../icons/spinner';
-// import Patreon from '../icons/patreon';
+import Patreon from '../icons/patreon';
 
 export default function Button({
   children,
@@ -19,6 +19,7 @@ export default function Button({
   size,
   iconPosition,
   disabled,
+  icon,
 }) {
   return (
     <ButtonWrapper width={width}>

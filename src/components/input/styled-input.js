@@ -4,6 +4,7 @@ export const FormGroup = styled.div`
   box-sizing: border-box;
   padding: 0rem;
   margin: 0 0 0.5rem 0;
+  width: 100%;
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
 `;
 
