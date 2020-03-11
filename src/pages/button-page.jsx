@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ButtonPage = () => {
-  return <p>Button Page</p>
+  return <span>Button page</span>
 }
 
 export default ButtonPage;
