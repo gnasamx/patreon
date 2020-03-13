@@ -112,7 +112,7 @@ export const DropdownListLiWrapper = styled.div`
 export const DropdownListLiSpan = styled.span`
   color: rgb(36, 30, 18);
   position: relative;
-  font-weight: 400 !important;
+  font-weight: ${({ isSelected }) => (isSelected ? 700 : 400)} !important;
   font-size: 1rem !important;
   line-height: 1.5 !important;
   margin: 0px;

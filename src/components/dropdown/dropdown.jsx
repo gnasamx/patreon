@@ -15,28 +15,38 @@ import {
 } from "./styled-dropdown";
 import ArrowDown from "../icons/arrow-down";
 
-export default function Dropdown({ list, onClick, isOpen, onSelectItem }) {
+export default function Dropdown({
+  list,
+  onClick,
+  isOpen,
+  onSelectItem,
+  selectedItem
+}) {
   return (
     <>
       <DropdownButton onClick={onClick}>
         <DropdownTextIconWrapper>
           <DropdownTextField>
-            <TextFiledSpan>Dropdown</TextFiledSpan>
+            <TextFiledSpan>{list[selectedItem].label}</TextFiledSpan>
           </DropdownTextField>
           <DropdownIconField>
             <ArrowDown />
           </DropdownIconField>
         </DropdownTextIconWrapper>
       </DropdownButton>
-      {isOpen && <DropdownList list={list} onSelectItem={onSelectItem} />}
+      {isOpen && (
+        <DropdownList
+          list={list}
+          onSelectItem={onSelectItem}
+          selectedItem={selectedItem}
+        />
+      )}
     </>
   );
 }
 
 function DropdownList(props) {
-  const { list, onSelectItem } = props;
-
-  console.log("==: onSelectItem: ", onSelectItem);
+  const { list, onSelectItem, selectedItem } = props;
 
   return (
     <DropdownListWrapper>
@@ -50,6 +60,7 @@ function DropdownList(props) {
                     key={i}
                     item={item}
                     onSelectItem={() => onSelectItem(this, i)}
+                    isSelected={selectedItem === i ? true : false}
                   />
                 );
               })}
@@ -61,13 +72,13 @@ function DropdownList(props) {
 }
 
 function DropdownListItem(props) {
-  const { item } = props,
+  const { item, onSelectItem, isSelected } = props,
     { label } = item;
 
   return (
-    <DropdownListLi>
+    <DropdownListLi onClick={onSelectItem}>
       <DropdownListLiWrapper>
-        <DropdownListLiSpan>{label}</DropdownListLiSpan>
+        <DropdownListLiSpan isSelected={isSelected}>{label}</DropdownListLiSpan>
       </DropdownListLiWrapper>
     </DropdownListLi>
   );
