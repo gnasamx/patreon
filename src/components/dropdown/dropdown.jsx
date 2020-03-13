@@ -14,6 +14,7 @@ import {
   DropdownListLiSpan
 } from "./styled-dropdown";
 import ArrowDown from "../icons/arrow-down";
+import ArrowUp from "../icons/arrow-up";
 
 export default function Dropdown({
   list,
@@ -30,7 +31,7 @@ export default function Dropdown({
             <TextFiledSpan>{list[selectedItem].label}</TextFiledSpan>
           </DropdownTextField>
           <DropdownIconField>
-            <ArrowDown />
+            {isOpen ? <ArrowUp /> : <ArrowDown />}
           </DropdownIconField>
         </DropdownTextIconWrapper>
       </DropdownButton>
